@@ -75,6 +75,24 @@ module.exports = () => {
         methods: {
           link: function (text) {
             return './School.html?name=' + text
+          },
+          pos: function(item) {
+            if ("評價" in item) {
+              return { width: item["評價"]['rate'][0] + '%' }
+            }
+            return { width: 0 };
+          },
+          mid: function() {
+            if ("評價" in item) {
+              return { width: item["評價"]['rate'][0] + '%' }
+            }
+            return { width: 0 };
+          },
+          neg: function() {
+            if ("評價" in item) {
+              return { width: item["評價"]['rate'][0] + '%' }
+            }
+            return { width: 0 };
           }
         },
         computed: {
@@ -98,6 +116,24 @@ module.exports = () => {
         methods: {
           link: function (text) {
             return './School.html?name=' + text
+          },
+          pos: function(item) {
+            if ("評價" in item) {
+              return { width: item["評價"]['rate'][0] + '%' }
+            }
+            return { width: 0 };
+          },
+          mid: function() {
+            if ("評價" in item) {
+              return { width: item["評價"]['rate'][0] + '%' }
+            }
+            return { width: 0 };
+          },
+          neg: function() {
+            if ("評價" in item) {
+              return { width: item["評價"]['rate'][0] + '%' }
+            }
+            return { width: 0 };
           }
         }
       })

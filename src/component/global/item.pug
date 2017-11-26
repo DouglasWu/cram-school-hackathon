@@ -11,9 +11,9 @@
   .item_rate
     span.item_subtitle 評價：
     .item_rate_bar
-      .item_rate-positive(style='width: 45%;')
-      .item_rate-neutral(style='width: 22%;')
-      .item_rate-negative(style='width: 32%;')
+      .item_rate-positive(:style="pos(item)")
+      .item_rate-neutral(:style="mid(item)")
+      .item_rate-negative(:style="neg(item)")
   .item_more
     a(:href="link(item['補習班名稱'])" data-iframe) 瞭解更多
   case page
