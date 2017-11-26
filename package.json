@@ -51,7 +51,6 @@
     "gulp-standard": "^10.0.0",
     "gulp-uglify": "^2.1.2",
     "gulp-util": "^3.0.8",
-    "lodash.assign": "^4.2.0",
     "pretty-hrtime": "^1.0.3",
     "require-dir": "^0.3.2",
     "vinyl-buffer": "^1.0.0",
