@@ -4,12 +4,15 @@ block css
   link(rel='stylesheet', href='https://unpkg.com/leaflet@1.0.3/dist/leaflet.css', integrity='sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==', crossorigin='')
   link(rel='stylesheet', href='/css/MarkerCluster.css')
   link(rel='stylesheet', href='/css/MarkerCluster.Default.css')
+  link(rel='stylesheet', href='/css/mobile.css')
 
 
 block js
   script(src='https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js', integrity='sha512-WXoSHqw/t26DszhdMhOXOkI7qCiv5QWXhH9R7CgvgZMHz1ImlkVQ3uNsiQKu5wwbbxtPzFXd1hK4tzno2VqhpA==', crossorigin='')
   script(src='/js/leaflet.markercluster-src.js')
   script(src='/js/realworld.test.js')
+  script(src='/js/cram.js')
+  script(src='/js/map.js')
 
 block content
   #topbar
@@ -17,4 +20,4 @@ block content
     #topbar_title 地圖瀏覽
 
   #main
-    #Map
+    #map

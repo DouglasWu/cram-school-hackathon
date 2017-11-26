@@ -18,7 +18,9 @@
     "app.js",
     "leaflet.markercluster-src.js",
     "leaflet.markercluster.js",
-    "realworld.test.js"
+    "realworld.test.js",
+    "cram.js",
+    "map.js"
   ],
   "extCleanFiles": []
 }
