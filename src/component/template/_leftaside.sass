@@ -1,0 +1,45 @@
+#leftaside
+  position: fixed
+  z-index: 10
+  min-height: 100%
+  overflow-y: auto
+  -webkit-overflow-scrolling: touch
+  width: calc(100% - 44px)
+  max-width: 400px
+  background-color: #fff
+  color: #333
+  +transform(translateX(-100%))
+  +transition(transform 0.5s)
+  &._open
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2)
+    +transform(translateX(0))
+
+#profile
+  padding: 88px 0
+  border-bottom: 1px solid #eee
+  text-align: center
+#profile_cover
+  display: block
+  width: 88px
+  height: 88px
+  border-radius: 50%
+  background-color: $yellow
+  vertical-align: middle
+  margin: 0 auto 12px
+
+#navigation
+  li
+    border-bottom: 1px solid #eee
+  a
+    display: block
+    text-decoration: none
+    height: 52px
+    line-height: 52px
+    padding: 0 22px
+    font-size: 14px
+    color: #333
+
+#version
+  line-height: 44px
+  font-size: 12px
+  padding: 0 22px 80px

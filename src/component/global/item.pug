@@ -1,0 +1,21 @@
+.item_content
+  .item_name {{item['補習班名稱']}}
+  .item_phone
+    span.item_subtitle 電話：
+    span.item_data {{item['電話']}}
+  .item_subject
+    span.item_subtitle 科目：
+    span.item_data {{item['補習班類別/科目']}}
+  .item_tags(v-if="item['違規紀錄'].length > 0")
+    span 有未改善違規項目
+  .item_rate
+    span.item_subtitle 評價：
+    .item_rate_bar
+      .item_rate-positive(style='width: 45%;')
+      .item_rate-neutral(style='width: 22%;')
+      .item_rate-negative(style='width: 32%;')
+  .item_more
+    a(:href="link(item['補習班名稱'])" data-iframe) 瞭解更多
+  case page
+    when 'favorite'
+      .item_delete ×

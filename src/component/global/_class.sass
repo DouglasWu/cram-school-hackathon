@@ -1,0 +1,84 @@
+.class_list
+  margin: 0 8px
+.class
+  padding-top: 8px
+  &:last-child
+    padding-bottom: 8px
+
+.class_content
+  background-color: #fff
+  padding: 12px
+  border-radius: 6px
+  font-size: 14px
+  line-height: 20px
+  position: relative
+
+.class_subtitle
+  color: $gray_d
+
+.class_image
+  margin-bottom: 12px
+  img
+    width: 100%
+    display: block
+
+.class_name
+  font-size: 20px
+  line-height: 24px
+  padding-bottom: 8px
+
+.class_tags
+  padding-top: 6px
+  span
+    background-color: $yellow
+    font-size: 12px
+    display: inline-block
+    padding: 0 6px
+    border-radius: 3px
+
+.class_rate
+  margin-top: 6px
+  position: relative
+  .class_subtitle
+    position: absolute
+    left: 0
+    top: 0
+
+.class_rate_bar
+  padding: 9px 0 9px 3em
+  width: 50%
+  +pie-clearfix
+
+.class_rate-positive,
+.class_rate-neutral,
+.class_rate-negative
+  float: left
+  height: 2px
+
+.class_rate-positive
+  background-color: $green
+.class_rate-neutral
+  background-color: $gray
+.class_rate-negative
+  background-color: $red
+
+.class_more
+  margin-top: 6px
+  a
+    display: inline-block
+    border: 1px solid #333
+    color: #333
+    text-decoration: none
+    border-radius: 3px
+    padding: 3px 6px
+
+.class_delete
+  position: absolute
+  top: 0
+  right: 0
+  width: 36px
+  height: 36px
+  text-align: center
+  line-height: 36px
+  font-size: 20px
+  color: $gray_d

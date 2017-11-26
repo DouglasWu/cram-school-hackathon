@@ -1,0 +1,50 @@
+extends ./component/template/tmp_common
+
+block content
+  #topbar
+    #navigation_button.topbar_button
+    #topbar_title 課程
+
+  #main
+    #Class
+      ul.class_list
+        li.class
+          .class_content
+            .class_image
+              img(src="http://confucius.culture.tw/temple/images/ima04.jpg", alt="新竹市孔廟親子讀經班")
+            .class_name 新竹市孔廟親子讀經班
+            .class_cell
+              span.class_subtitle 開課單位：
+              span.item_data 新竹市孔子廟
+              //- a(href='./School.html' data-iframe) 新竹市孔子廟
+            .class_cell
+              span.class_subtitle 時段：
+              | 每週六上午9:00-10:30
+            .class_cell
+              span.class_subtitle 對象：
+              | 3歲至國小
+            .class_cell
+              span.class_subtitle 地址：
+              | 新竹市公園路289號
+            .class_more
+              a(href="http://www.gsr.org.tw/contents/stronghold_detail?detail=336" data-iframe) 前往課程
+        li.class
+          .class_content
+            .class_image
+              img(src="https://www.ctworld.org.tw/108/puzhao4/D03-011.jpg", alt="兒童親子禪修班")
+            .class_name 兒童親子禪修班
+            .class_cell
+              span.class_subtitle 開課單位：
+              span.item_data 普親精舍
+              //- a(href='./School.html' data-iframe) 普親精舍
+            .class_cell
+              span.class_subtitle 開課日期：
+              | 10/14
+            .class_cell
+              span.class_subtitle 時段：
+              | 每週六14:00-16:00
+            .class_cell
+              span.class_subtitle 地址：
+              | 新竹市學府路445號
+            .class_more
+              a(href="https://www.ctworld.org.tw/108/puqin1/index.htm" data-iframe) 前往課程
