@@ -13,3 +13,6 @@
 - Windows
   - develope: `npm run dev`
   - compression: `npm run build`
+
+- Slides
+  `脆餅馬沙拉.pdf`
