@@ -1,0 +1,31 @@
+extends ./component/template/tmp_common
+
+block content
+  #topbar
+    #navigation_button.topbar_button
+    #topbar_title 探索
+    a#search_button.topbar_button(href='./Search.html')
+
+  #main
+    #Index
+      #item_list
+        #item_filter
+          select(v-model='selected')
+            option(selected='selected') 所有類別/科目
+            option 資訊類
+            option 美術、書法、攝影、美工設計、圍棋類
+            option 縫紉類
+            option 音樂、舞蹈類
+            option 文理類
+            option 法政類
+            option 瑜珈類
+            option 速讀類
+            option 美容、美髮理髮類
+            option 其他類
+            option 電機、汽車修護、建築、工藝、製圖類
+            option 商類：珠算、心算、會計
+            option 外語類
+            option 家政、插花、烹飪類
+        ul.item_list
+          li.item(v-for='item in items')
+            include ./component/global/item

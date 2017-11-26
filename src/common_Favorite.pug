@@ -1,0 +1,14 @@
+extends ./component/template/tmp_common
+
+block content
+  #topbar
+    #navigation_button.topbar_button
+    #topbar_title 收藏
+
+  #main
+    #Favorite
+      - var page = 'favorite'
+      #item_list
+        ul.item_list
+          li.item
+            include ./component/global/item

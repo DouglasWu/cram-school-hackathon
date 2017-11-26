@@ -1,0 +1,19 @@
+extends ./component/template/tmp_common
+
+block content
+  #topbar
+    input#search_box(
+      type='text'
+      placeholder='請輸入補習班名稱...'
+      autofocus=true
+    )
+    a#search_button_cancel.topbar_button(
+      href='./Index.html'
+    )
+
+  #main
+    #Search
+      #item_list
+        ul.item_list
+          li.item(v-for='item in items')
+            include ./component/global/item

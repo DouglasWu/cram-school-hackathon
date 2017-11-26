@@ -1,0 +1,80 @@
+.item_list
+  margin: 0 8px
+.item
+  padding-top: 8px
+  &:last-child
+    padding-bottom: 8px
+
+.item_content
+  background-color: #fff
+  padding: 12px
+  border-radius: 6px
+  font-size: 14px
+  line-height: 20px
+  position: relative
+
+.item_subtitle
+  color: $gray_d
+
+.item_name
+  font-size: 20px
+  line-height: 24px
+  padding-bottom: 8px
+
+.item_tags
+  padding-top: 6px
+  span
+    background-color: $yellow
+    font-size: 12px
+    display: inline-block
+    padding: 0 6px
+    border-radius: 3px
+  + .item_rate
+    margin-top: 6px
+
+.item_rate
+  position: relative
+  .item_subtitle
+    position: absolute
+    left: 0
+    top: 0
+
+.item_rate_bar
+  padding: 9px 0 9px 3em
+  width: 50%
+  +pie-clearfix
+
+.item_rate-positive,
+.item_rate-neutral,
+.item_rate-negative
+  float: left
+  height: 2px
+
+.item_rate-positive
+  background-color: $green
+.item_rate-neutral
+  background-color: $gray
+.item_rate-negative
+  background-color: $red
+
+.item_more
+  margin-top: 6px
+  a
+    display: inline-block
+    border: 1px solid #333
+    color: #333
+    text-decoration: none
+    border-radius: 3px
+    padding: 3px 6px
+
+.item_delete
+  position: absolute
+  top: 0
+  right: 0
+  width: 36px
+  height: 36px
+  text-align: center
+  line-height: 36px
+  font-size: 20px
+  color: $gray_d
+  cursor: pointer

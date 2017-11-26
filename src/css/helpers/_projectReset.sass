@@ -1,0 +1,24 @@
+$blue: #2aa1d9
+$yellow: #f7d639
+$gray: #e4e8f1
+$gray_d: darken($gray, 15%)
+$green: #56c96d
+$red: #e65f5f
+
+html, body
+  height: 100%
+
+.mock-mobile
+  width: 100%
+  min-height: 100%
+  background-color: #f3f3f3
+  position: relative
+  &, & a
+    color: #333
+
+#main
+  min-height: 100%
+  +box-sizing(border-box)
+
+#topbar + #main
+  padding-top: 52px

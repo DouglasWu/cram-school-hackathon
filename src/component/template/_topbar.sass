@@ -1,0 +1,106 @@
+#topbar
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 52px
+  background-color: $blue
+  z-index: 5
+
+#topbar_title
+  color: #fff
+  margin-left: 52px
+  line-height: 52px
+
+.topbar_button
+  position: absolute
+  width: 52px
+  height: 52px
+  cursor: pointer
+  top: 0
+
+#navigation_button
+  left: 0
+  z-index: 2
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    width: 20px
+    height: 4px
+    left: 16px
+    top: 24px
+    background-color: #fff
+    +box-shadow(0 8px 0 #fff, 0 -8px 0 #fff)
+  &:after
+    content: ''
+    display: block
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    visibility: hidden
+    opacity: 0
+    z-index: 1
+    background-color: rgba(0, 0, 0, 0.15)
+    +transition(visibility 0.5s, opacity 0.5s)
+
+#leftaside._open + #topbar #navigation_button:after
+  visibility: visible
+  opacity: 1
+
+#search_button
+  right: 0
+  z-index: 1
+  &:before
+    content: ''
+    display: block
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    background-color: $blue
+    +box-shadow(0 0 0 4px #fff)
+    position: absolute
+    left: 23px
+    top: 17px
+  &:after
+    content: ''
+    display: block
+    width: 10px
+    height: 4px
+    background-color: #fff
+    +transform(rotate(-45deg))
+    position: absolute
+    top: 31px
+    left: 14px
+
+#search_box
+  height: 24px
+  padding: 6px
+  margin: 8px
+  line-height: 24px
+  border: 0
+  width: calc(100% - 72px)
+  border-radius: 4px
+  &:focus
+    outline: 0
+
+#search_button_cancel
+  right: 0
+  &:before, &:after
+    content: ''
+    display: block
+    background-color: #fff
+    position: absolute
+    +transform(rotate(45deg))
+  &:before
+    width: 16px
+    height: 4px
+    left: 18px
+    top: 24px
+  &:after
+    width: 4px
+    height: 16px
+    left: 24px
+    top: 18px
