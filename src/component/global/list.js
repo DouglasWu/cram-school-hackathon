@@ -76,23 +76,14 @@ module.exports = () => {
           link: function (text) {
             return './School.html?name=' + text
           },
-          pos: function(item) {
-            if ("評價" in item) {
-              return { width: item["評價"]['rate'][0] + '%' }
+          rank: function (num) {
+            if (num > 0.3) {
+              return '正'
+            } else if (num > -0.1) {
+              return '中'
+            } else {
+              return '負'
             }
-            return { width: 0 };
-          },
-          mid: function() {
-            if ("評價" in item) {
-              return { width: item["評價"]['rate'][0] + '%' }
-            }
-            return { width: 0 };
-          },
-          neg: function() {
-            if ("評價" in item) {
-              return { width: item["評價"]['rate'][0] + '%' }
-            }
-            return { width: 0 };
           }
         },
         computed: {
@@ -116,24 +107,17 @@ module.exports = () => {
         methods: {
           link: function (text) {
             return './School.html?name=' + text
-          },
-          pos: function(item) {
-            if ("評價" in item) {
-              return { width: item["評價"]['rate'][0] + '%' }
+          }
+        },
+        computed: {
+          rank: function (num) {
+            if (num > 0.3) {
+              return '正'
+            } else if (num > -0.1) {
+              return '中'
+            } else {
+              return '負'
             }
-            return { width: 0 };
-          },
-          mid: function() {
-            if ("評價" in item) {
-              return { width: item["評價"]['rate'][0] + '%' }
-            }
-            return { width: 0 };
-          },
-          neg: function() {
-            if ("評價" in item) {
-              return { width: item["評價"]['rate'][0] + '%' }
-            }
-            return { width: 0 };
           }
         }
       })
@@ -165,7 +149,12 @@ module.exports = () => {
 
     if (keyword.indexOf('違規') > -1) {
       ShowData = ListData.filter(value => {
-        return value['違規紀錄'].length > 0
+        if (value['違規紀錄'] && value['違規紀錄'].length > 0) {
+          return true
+        } else if (value['違規紀錄-泳'] && value['違規紀錄-泳'].length > 0) {
+          return true
+        }
+        // return (value['違規紀錄'].length > 0 || value['違規紀錄-泳'].length > 0)
       })
     } else if (keyword) {
       ShowData = ListData.filter(value => {

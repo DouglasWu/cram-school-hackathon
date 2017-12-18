@@ -18,14 +18,22 @@ block content
           span.item_subtitle 開課科目：
           span.item_data.item_subject(v-for="data in item['科目']") {{data}}
 
-    .school_wrap
+    .school_wrap(v-if="item['評價']")
       .item_content
         .school_wrap_subtitle 評價
         .item_rate
           .item_rate_bar
-            .item_rate-positive(:style='pos(item)')
-            .item_rate-neutral(:style='mid(item)')
-            .item_rate-negative(:style='neg(item)')
+            .item_rate-positive(:style="{width: item['評價'].rate[0] + '%'}")
+            .item_rate-neutral(:style="{width: item['評價'].rate[1] + '%'}")
+            .item_rate-negative(:style="{width: item['評價'].rate[2] + '%'}")
+        .item_comments
+          ul
+            li(v-for="data in item['評價'].comments.slice(0, 10)")
+              .item_comment_title
+                //- span {{rank(data.score)}}
+                a(:href='data.url') {{data.title}}
+              .item_comment_summary {{data.summary}}
+                
 
     .school_wrap
       .item_content
@@ -40,19 +48,27 @@ block content
           span.item_subtitle 班舍總面積：
           span.item_data {{item['班舍總面積']}}
 
-    .school_wrap(v-if="item['違規紀錄'].length > 0")
-      .item_content
-        .school_wrap_subtitle 違規紀錄
-        div(v-for="data in item['違規紀錄']")
+    div(v-if="item['違規紀錄']")
+      .school_wrap(v-if="item['違規紀錄'].length > 0")
+        .item_content
+          .school_wrap_subtitle 違規紀錄
+          div(v-for="data in item['違規紀錄']")
+            .item_info
+              span.item_subtitle 日期1：
+              span.item_data {{data['日期1']}}
+            .item_info
+              span.item_subtitle 違規：
+              span.item_data {{data['違規']}}
+            .item_info
+              span.item_subtitle 日期2：
+              span.item_data {{data['日期2']}}
+
+    div(v-if="item['違規紀錄-泳']")
+      .school_wrap(v-if="item['違規紀錄-泳'].length > 0")
+        .item_content
+          .school_wrap_subtitle 違規紀錄
           .item_info
-            span.item_subtitle 日期1：
-            span.item_data {{data['日期1']}}
-          .item_info
-            span.item_subtitle 違規：
-            span.item_data {{data['違規']}}
-          .item_info
-            span.item_subtitle 日期2：
-            span.item_data {{data['日期2']}}
+            span(v-for="data in item['違規紀錄-泳']") {{data}}
 
     .school_wrap
       .item_content
