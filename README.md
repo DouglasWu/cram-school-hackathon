@@ -15,4 +15,5 @@
   - compression: `npm run build`
 
 - Slides
-  `脆餅馬沙拉.pdf`
+  - `slides/補習班馬沙拉.pdf`
+  - `slides/教育馬沙拉.pdf`
